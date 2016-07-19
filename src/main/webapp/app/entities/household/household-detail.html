@@ -1,0 +1,50 @@
+
+<div>
+    <h2><span translate="cgApp.household.detail.title">Household</span> {{vm.household.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="cgApp.household.householdId">Household Id</span></dt>
+        <dd>
+            <span>{{vm.household.householdId}}</span>
+        </dd>
+        <dt><span translate="cgApp.household.householdAddress">Household Address</span></dt>
+        <dd>
+            <span>{{vm.household.householdAddress}}</span>
+        </dd>
+        <dt><span translate="cgApp.household.householdArea">Household Area</span></dt>
+        <dd>
+            <span>{{vm.household.householdArea}}</span>
+        </dd>
+        <dt><span translate="cgApp.household.householdPropertyfee">Household Propertyfee</span></dt>
+        <dd>
+            <span>{{vm.household.householdPropertyfee}}</span>
+        </dd>
+        <dt><span translate="cgApp.household.householdGarbagefee">Household Garbagefee</span></dt>
+        <dd>
+            <span>{{vm.household.householdGarbagefee}}</span>
+        </dd>
+        <dt><span translate="cgApp.household.lightAndWater">Light And Water</span></dt>
+        <dd>
+            <span>{{vm.household.lightAndWater}}</span>
+        </dd>
+        <dt><span translate="cgApp.household.presentValue">Present Value</span></dt>
+        <dd>
+            <span>{{vm.household.presentValue}}</span>
+        </dd>
+        <dt><span translate="cgApp.household.homeOwnersName">Home Owners Name</span></dt>
+        <dd>
+            <span>{{vm.household.homeOwnersName}}</span>
+        </dd>
+        <dt><span translate="cgApp.household.homeOwnersPhone">Home Owners Phone</span></dt>
+        <dd>
+            <span>{{vm.household.homeOwnersPhone}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

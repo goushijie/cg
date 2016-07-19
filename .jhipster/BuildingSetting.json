@@ -1,0 +1,45 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "buildingId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "buildingName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "buildingAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "buildingNumber",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "unitNumber",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "householdNumber",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "countTier",
+      "fieldType": "Long"
+    }
+  ],
+  "changelogDate": "20160719053131",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "building_setting"
+}

@@ -1,0 +1,42 @@
+
+<div>
+    <h2><span translate="cgApp.news.detail.title">News</span> {{vm.news.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="cgApp.news.newsId">News Id</span></dt>
+        <dd>
+            <span>{{vm.news.newsId}}</span>
+        </dd>
+        <dt><span translate="cgApp.news.newsName">News Name</span></dt>
+        <dd>
+            <span>{{vm.news.newsName}}</span>
+        </dd>
+        <dt><span translate="cgApp.news.newsType">News Type</span></dt>
+        <dd>
+            <span>{{vm.news.newsType}}</span>
+        </dd>
+        <dt><span translate="cgApp.news.newsContent">News Content</span></dt>
+        <dd>
+            <span>{{vm.news.newsContent}}</span>
+        </dd>
+        <dt><span translate="cgApp.news.receiver">Receiver</span></dt>
+        <dd>
+            <span>{{vm.news.receiver}}</span>
+        </dd>
+        <dt><span translate="cgApp.news.sendTime">Send Time</span></dt>
+        <dd>
+            <span>{{vm.news.sendTime}}</span>
+        </dd>
+        <dt><span translate="cgApp.news.household">Household</span></dt>
+        <dd>
+            <a ui-sref="household-detail({id:vm.news.household.id})">{{vm.news.household.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,72 @@
+<div>
+    <h2 translate="cgApp.household.home.title">Households</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="household.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="cgApp.household.home.createLabel">
+                        Create new Household
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="cgApp.household.householdId">Household Id</span></th>
+                    <th><span translate="cgApp.household.householdAddress">Household Address</span></th>
+                    <th><span translate="cgApp.household.householdArea">Household Area</span></th>
+                    <th><span translate="cgApp.household.householdPropertyfee">Household Propertyfee</span></th>
+                    <th><span translate="cgApp.household.householdGarbagefee">Household Garbagefee</span></th>
+                    <th><span translate="cgApp.household.lightAndWater">Light And Water</span></th>
+                    <th><span translate="cgApp.household.presentValue">Present Value</span></th>
+                    <th><span translate="cgApp.household.homeOwnersName">Home Owners Name</span></th>
+                    <th><span translate="cgApp.household.homeOwnersPhone">Home Owners Phone</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="household in vm.households track by household.id">
+                    <td><a ui-sref="household-detail({id:household.id})">{{household.id}}</a></td>
+                    <td>{{household.householdId}}</td>
+                    <td>{{household.householdAddress}}</td>
+                    <td>{{household.householdArea}}</td>
+                    <td>{{household.householdPropertyfee}}</td>
+                    <td>{{household.householdGarbagefee}}</td>
+                    <td>{{household.lightAndWater}}</td>
+                    <td>{{household.presentValue}}</td>
+                    <td>{{household.homeOwnersName}}</td>
+                    <td>{{household.homeOwnersPhone}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="household-detail({id:household.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="household.edit({id:household.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="household.delete({id:household.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

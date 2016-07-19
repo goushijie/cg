@@ -1,0 +1,28 @@
+{
+    "cgApp": {
+        "buildingSetting" : {
+            "home": {
+                "title": "Building Settings",
+                "createLabel": "Create a new Building Setting",
+                "createOrEditLabel": "Create or edit a Building Setting",
+                "search": "Search for Building Setting"
+            },
+            "created": "A new Building Setting is created with identifier {{ param }}",
+            "updated": "A Building Setting is updated with identifier {{ param }}",
+            "deleted": "A Building Setting is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Building Setting {{ id }}?"
+            },
+            "detail": {
+                "title": "Building Setting"
+            },
+            "buildingId": "Building Id",
+            "buildingName": "Building Name",
+            "buildingAddress": "Building Address",
+            "buildingNumber": "Building Number",
+            "unitNumber": "Unit Number",
+            "householdNumber": "Household Number",
+            "countTier": "Count Tier"
+        }
+    }
+}

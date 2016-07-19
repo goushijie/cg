@@ -1,0 +1,48 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "household",
+      "otherEntityName": "household",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "newsId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "newsName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "newsType",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "newsContent",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "receiver",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "sendTime",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160719053135",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "news"
+}

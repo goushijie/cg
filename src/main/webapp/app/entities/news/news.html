@@ -1,0 +1,70 @@
+<div>
+    <h2 translate="cgApp.news.home.title">News</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="news.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="cgApp.news.home.createLabel">
+                        Create new News
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="cgApp.news.newsId">News Id</span></th>
+                    <th><span translate="cgApp.news.newsName">News Name</span></th>
+                    <th><span translate="cgApp.news.newsType">News Type</span></th>
+                    <th><span translate="cgApp.news.newsContent">News Content</span></th>
+                    <th><span translate="cgApp.news.receiver">Receiver</span></th>
+                    <th><span translate="cgApp.news.sendTime">Send Time</span></th>
+                    <th><span translate="cgApp.news.household">Household</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="news in vm.news track by news.id">
+                    <td><a ui-sref="news-detail({id:news.id})">{{news.id}}</a></td>
+                    <td>{{news.newsId}}</td>
+                    <td>{{news.newsName}}</td>
+                    <td>{{news.newsType}}</td>
+                    <td>{{news.newsContent}}</td>
+                    <td>{{news.receiver}}</td>
+                    <td>{{news.sendTime}}</td>
+                    <td>
+                        <a ui-sref="household-detail({id:news.household.id})">{{news.household.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="news-detail({id:news.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="news.edit({id:news.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="news.delete({id:news.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

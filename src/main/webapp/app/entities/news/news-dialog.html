@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myNewsLabel" translate="cgApp.news.home.createOrEditLabel">Create or edit a News</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.news.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.news.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.news.newsId" for="field_newsId">News Id</label>
+            <input type="number" class="form-control" name="newsId" id="field_newsId"
+                    ng-model="vm.news.newsId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.news.newsName" for="field_newsName">News Name</label>
+            <input type="text" class="form-control" name="newsName" id="field_newsName"
+                    ng-model="vm.news.newsName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.news.newsType" for="field_newsType">News Type</label>
+            <input type="text" class="form-control" name="newsType" id="field_newsType"
+                    ng-model="vm.news.newsType"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.news.newsContent" for="field_newsContent">News Content</label>
+            <input type="text" class="form-control" name="newsContent" id="field_newsContent"
+                    ng-model="vm.news.newsContent"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.news.receiver" for="field_receiver">Receiver</label>
+            <input type="text" class="form-control" name="receiver" id="field_receiver"
+                    ng-model="vm.news.receiver"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.news.sendTime" for="field_sendTime">Send Time</label>
+            <input type="text" class="form-control" name="sendTime" id="field_sendTime"
+                    ng-model="vm.news.sendTime"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="cgApp.news.household" for="field_household">Household</label>
+            <select class="form-control" id="field_household" name="household" ng-model="vm.news.household" ng-options="household as household.id for household in vm.households track by household.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

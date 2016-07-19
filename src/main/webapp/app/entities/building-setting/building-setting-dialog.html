@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBuildingSettingLabel" translate="cgApp.buildingSetting.home.createOrEditLabel">Create or edit a Building Setting</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.buildingSetting.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.buildingSetting.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.buildingSetting.buildingId" for="field_buildingId">Building Id</label>
+            <input type="number" class="form-control" name="buildingId" id="field_buildingId"
+                    ng-model="vm.buildingSetting.buildingId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.buildingSetting.buildingName" for="field_buildingName">Building Name</label>
+            <input type="text" class="form-control" name="buildingName" id="field_buildingName"
+                    ng-model="vm.buildingSetting.buildingName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.buildingSetting.buildingAddress" for="field_buildingAddress">Building Address</label>
+            <input type="text" class="form-control" name="buildingAddress" id="field_buildingAddress"
+                    ng-model="vm.buildingSetting.buildingAddress"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.buildingSetting.buildingNumber" for="field_buildingNumber">Building Number</label>
+            <input type="number" class="form-control" name="buildingNumber" id="field_buildingNumber"
+                    ng-model="vm.buildingSetting.buildingNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.buildingSetting.unitNumber" for="field_unitNumber">Unit Number</label>
+            <input type="number" class="form-control" name="unitNumber" id="field_unitNumber"
+                    ng-model="vm.buildingSetting.unitNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.buildingSetting.householdNumber" for="field_householdNumber">Household Number</label>
+            <input type="number" class="form-control" name="householdNumber" id="field_householdNumber"
+                    ng-model="vm.buildingSetting.householdNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.buildingSetting.countTier" for="field_countTier">Count Tier</label>
+            <input type="number" class="form-control" name="countTier" id="field_countTier"
+                    ng-model="vm.buildingSetting.countTier"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,43 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "household",
+      "otherEntityName": "household",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "userId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "userName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "userPwd",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "userMail",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "userPhone",
+      "fieldType": "Long"
+    }
+  ],
+  "changelogDate": "20160719053134",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "owner"
+}

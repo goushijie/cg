@@ -1,0 +1,42 @@
+
+<div>
+    <h2><span translate="cgApp.buildingSetting.detail.title">Building Setting</span> {{vm.buildingSetting.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="cgApp.buildingSetting.buildingId">Building Id</span></dt>
+        <dd>
+            <span>{{vm.buildingSetting.buildingId}}</span>
+        </dd>
+        <dt><span translate="cgApp.buildingSetting.buildingName">Building Name</span></dt>
+        <dd>
+            <span>{{vm.buildingSetting.buildingName}}</span>
+        </dd>
+        <dt><span translate="cgApp.buildingSetting.buildingAddress">Building Address</span></dt>
+        <dd>
+            <span>{{vm.buildingSetting.buildingAddress}}</span>
+        </dd>
+        <dt><span translate="cgApp.buildingSetting.buildingNumber">Building Number</span></dt>
+        <dd>
+            <span>{{vm.buildingSetting.buildingNumber}}</span>
+        </dd>
+        <dt><span translate="cgApp.buildingSetting.unitNumber">Unit Number</span></dt>
+        <dd>
+            <span>{{vm.buildingSetting.unitNumber}}</span>
+        </dd>
+        <dt><span translate="cgApp.buildingSetting.householdNumber">Household Number</span></dt>
+        <dd>
+            <span>{{vm.buildingSetting.householdNumber}}</span>
+        </dd>
+        <dt><span translate="cgApp.buildingSetting.countTier">Count Tier</span></dt>
+        <dd>
+            <span>{{vm.buildingSetting.countTier}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

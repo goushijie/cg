@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOwnerLabel" translate="cgApp.owner.home.createOrEditLabel">Create or edit a Owner</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.owner.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.owner.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.owner.userId" for="field_userId">User Id</label>
+            <input type="number" class="form-control" name="userId" id="field_userId"
+                    ng-model="vm.owner.userId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.owner.userName" for="field_userName">User Name</label>
+            <input type="text" class="form-control" name="userName" id="field_userName"
+                    ng-model="vm.owner.userName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.owner.userPwd" for="field_userPwd">User Pwd</label>
+            <input type="text" class="form-control" name="userPwd" id="field_userPwd"
+                    ng-model="vm.owner.userPwd"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.owner.userMail" for="field_userMail">User Mail</label>
+            <input type="text" class="form-control" name="userMail" id="field_userMail"
+                    ng-model="vm.owner.userMail"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.owner.userPhone" for="field_userPhone">User Phone</label>
+            <input type="number" class="form-control" name="userPhone" id="field_userPhone"
+                    ng-model="vm.owner.userPhone"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="cgApp.owner.household" for="field_household">Household</label>
+            <select class="form-control" id="field_household" name="household" ng-model="vm.owner.household" ng-options="household as household.id for household in vm.households track by household.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,33 @@
+{
+    "cgApp": {
+        "household" : {
+            "home": {
+                "title": "Households",
+                "createLabel": "Create a new Household",
+                "createOrEditLabel": "Create or edit a Household",
+                "search": "Search for Household"
+            },
+            "created": "A new Household is created with identifier {{ param }}",
+            "updated": "A Household is updated with identifier {{ param }}",
+            "deleted": "A Household is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Household {{ id }}?"
+            },
+            "detail": {
+                "title": "Household"
+            },
+            "householdId": "Household Id",
+            "householdAddress": "Household Address",
+            "householdArea": "Household Area",
+            "householdPropertyfee": "Household Propertyfee",
+            "householdGarbagefee": "Household Garbagefee",
+            "lightAndWater": "Light And Water",
+            "presentValue": "Present Value",
+            "homeOwnersName": "Home Owners Name",
+            "homeOwnersPhone": "Home Owners Phone",
+            "payment": "Payment",
+            "owner": "Owner",
+            "news": "News"
+        }
+    }
+}

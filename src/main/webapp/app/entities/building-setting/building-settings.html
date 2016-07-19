@@ -1,0 +1,68 @@
+<div>
+    <h2 translate="cgApp.buildingSetting.home.title">Building Settings</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="building-setting.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="cgApp.buildingSetting.home.createLabel">
+                        Create new Building Setting
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="cgApp.buildingSetting.buildingId">Building Id</span></th>
+                    <th><span translate="cgApp.buildingSetting.buildingName">Building Name</span></th>
+                    <th><span translate="cgApp.buildingSetting.buildingAddress">Building Address</span></th>
+                    <th><span translate="cgApp.buildingSetting.buildingNumber">Building Number</span></th>
+                    <th><span translate="cgApp.buildingSetting.unitNumber">Unit Number</span></th>
+                    <th><span translate="cgApp.buildingSetting.householdNumber">Household Number</span></th>
+                    <th><span translate="cgApp.buildingSetting.countTier">Count Tier</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="buildingSetting in vm.buildingSettings track by buildingSetting.id">
+                    <td><a ui-sref="building-setting-detail({id:buildingSetting.id})">{{buildingSetting.id}}</a></td>
+                    <td>{{buildingSetting.buildingId}}</td>
+                    <td>{{buildingSetting.buildingName}}</td>
+                    <td>{{buildingSetting.buildingAddress}}</td>
+                    <td>{{buildingSetting.buildingNumber}}</td>
+                    <td>{{buildingSetting.unitNumber}}</td>
+                    <td>{{buildingSetting.householdNumber}}</td>
+                    <td>{{buildingSetting.countTier}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="building-setting-detail({id:buildingSetting.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="building-setting.edit({id:buildingSetting.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="building-setting.delete({id:buildingSetting.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

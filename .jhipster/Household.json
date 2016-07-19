@@ -1,0 +1,77 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-many",
+      "relationshipName": "payment",
+      "otherEntityName": "payment",
+      "otherEntityRelationshipName": "household"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "owner",
+      "otherEntityName": "owner",
+      "otherEntityRelationshipName": "household"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipType": "one-to-many",
+      "relationshipName": "news",
+      "otherEntityName": "news",
+      "otherEntityRelationshipName": "household"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "householdId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "householdAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "householdArea",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "householdPropertyfee",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "householdGarbagefee",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "lightAndWater",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "presentValue",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "homeOwnersName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "homeOwnersPhone",
+      "fieldType": "Long"
+    }
+  ],
+  "changelogDate": "20160719053132",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "household"
+}

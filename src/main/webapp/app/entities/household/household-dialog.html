@@ -1,0 +1,80 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myHouseholdLabel" translate="cgApp.household.home.createOrEditLabel">Create or edit a Household</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.household.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.household.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.household.householdId" for="field_householdId">Household Id</label>
+            <input type="number" class="form-control" name="householdId" id="field_householdId"
+                    ng-model="vm.household.householdId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.household.householdAddress" for="field_householdAddress">Household Address</label>
+            <input type="text" class="form-control" name="householdAddress" id="field_householdAddress"
+                    ng-model="vm.household.householdAddress"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.household.householdArea" for="field_householdArea">Household Area</label>
+            <input type="text" class="form-control" name="householdArea" id="field_householdArea"
+                    ng-model="vm.household.householdArea"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.household.householdPropertyfee" for="field_householdPropertyfee">Household Propertyfee</label>
+            <input type="number" class="form-control" name="householdPropertyfee" id="field_householdPropertyfee"
+                    ng-model="vm.household.householdPropertyfee"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.household.householdGarbagefee" for="field_householdGarbagefee">Household Garbagefee</label>
+            <input type="number" class="form-control" name="householdGarbagefee" id="field_householdGarbagefee"
+                    ng-model="vm.household.householdGarbagefee"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.household.lightAndWater" for="field_lightAndWater">Light And Water</label>
+            <input type="number" class="form-control" name="lightAndWater" id="field_lightAndWater"
+                    ng-model="vm.household.lightAndWater"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.household.presentValue" for="field_presentValue">Present Value</label>
+            <input type="number" class="form-control" name="presentValue" id="field_presentValue"
+                    ng-model="vm.household.presentValue"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.household.homeOwnersName" for="field_homeOwnersName">Home Owners Name</label>
+            <input type="text" class="form-control" name="homeOwnersName" id="field_homeOwnersName"
+                    ng-model="vm.household.homeOwnersName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cgApp.household.homeOwnersPhone" for="field_homeOwnersPhone">Home Owners Phone</label>
+            <input type="number" class="form-control" name="homeOwnersPhone" id="field_homeOwnersPhone"
+                    ng-model="vm.household.homeOwnersPhone"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

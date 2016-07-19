@@ -1,0 +1,72 @@
+//楼栋设置
+entity BuildingSetting {
+	buildingId Long,
+    //小区名称
+    buildingName String,
+    //小区地址
+    buildingAddress String,
+    //几栋
+	buildingNumber Long,
+    //几单元
+    unitNumber Long,
+    //几户
+    householdNumber Long,
+    //几层
+    countTier Long
+}
+
+//房子信息
+entity Household{
+	householdId Long,
+	//房子地址：几栋，几单元
+    householdAddress String,
+    //房子面积
+    householdArea String,
+    //房子物业费
+    householdPropertyfee Long,
+    //房子垃圾费
+    householdGarbagefee Long,
+    //水电费
+     lightAndWater Long,
+     //现在价格
+     presentValue Long,
+     //业主姓名
+     homeOwnersName String,
+     //业主手机号码
+     homeOwnersPhone Long
+}
+//缴费
+entity Payment{
+   paymentId Long,
+   paymentTime Long,
+   paymentAmount Long,
+   paymentStaff String,
+   paymentMode String
+}
+
+relationship OneToMany {
+	Household{payment} to Payment
+}
+//注册人员
+entity Owner{
+	userId Long,
+	userName String,
+    userPwd String,
+    userMail String,
+    userPhone Long
+}
+relationship OneToMany {
+	Household{owner} to Owner
+}
+//信息发布
+entity News{
+	newsID Long,
+	newsName String,
+    newsType String,
+    newsContent String,
+    receiver String,
+    sendTime String
+}
+relationship OneToMany {
+	Household{news} to News
+}
